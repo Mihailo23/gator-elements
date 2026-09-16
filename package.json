@@ -48,8 +48,8 @@
     "@types/react-dom": "^19.3.0",
     "bumpp": "^11.1.0",
     "jsdom": "^30.0.1",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "typescript": "^7.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:"
