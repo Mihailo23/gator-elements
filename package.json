@@ -13,7 +13,8 @@
     "url": "git+https://github.com/Mihailo23/gator-elements.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "type": "module",
   "main": "./dist/index.cjs",
