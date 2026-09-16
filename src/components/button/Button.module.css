@@ -1,0 +1,18 @@
+.root {
+  font: 600 13px/1 var(--font-sans);
+  border-radius: var(--radius);
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--ink);
+  color: var(--card);
+  border: 0;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
