@@ -1,0 +1,24 @@
+.field label {
+  display: block;
+  color: var(--mute);
+  font-size: 12px;
+  margin: 0 0 5px;
+  font-family: var(--font-sans);
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 55%, var(--card));
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 9px 11px;
+  font: inherit;
+  font-family: var(--font-sans);
+}
+
+.field input:focus {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}

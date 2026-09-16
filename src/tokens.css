@@ -1,0 +1,14 @@
+:root {
+  --ink: #15202b;
+  --mute: #5c6b7a;
+  --paper: #f2f5f7;
+  --card: #ffffff;
+  --line: #d3dce4;
+  --signal: #c8890a;
+  --radius: 14px;
+  --space: 8px;
+  --font-serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-body: 18px;
+  --pad-form: 32px;
+}

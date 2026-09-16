@@ -1,0 +1,8 @@
+.root {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--signal);
+  color: #1a1408;
+  font: 600 11px/1 var(--font-sans);
+}

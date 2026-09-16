@@ -1,0 +1,32 @@
+.wrap {
+  display: grid;
+  gap: 5px;
+}
+
+.caption {
+  color: var(--mute);
+  font-size: 12px;
+  font-family: var(--font-sans);
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row button {
+  flex: 1;
+  font: 600 13px/1 var(--font-sans);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.row button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--card);
+  border-color: var(--ink);
+}
