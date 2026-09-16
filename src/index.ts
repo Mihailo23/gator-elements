@@ -8,3 +8,5 @@ export type {
   SegmentedControlProps,
   SegmentedOption,
 } from "./components/segmented-control/SegmentedControl.js";
+export { Badge } from "./components/badge/Badge.js";
+export type { BadgeProps } from "./components/badge/Badge.js";
