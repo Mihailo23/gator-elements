@@ -3,11 +3,28 @@
   border-radius: var(--radius);
   padding: var(--space-3) var(--space-4);
   cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root {
+    transition: none;
+  }
 }
 
 .root:focus-visible {
   outline: var(--ring) solid var(--focus);
   outline-offset: var(--ring);
+}
+
+.root:disabled {
+  background: var(--neutral-200);
+  color: var(--neutral-700);
+  border-color: var(--neutral-200);
+  cursor: not-allowed;
 }
 
 .primary {
@@ -16,8 +33,31 @@
   border: 0;
 }
 
+/* white on primary-900 is 11.04:1 */
+.primary:hover:not(:disabled),
+.primary:active:not(:disabled) {
+  background: var(--primary-900);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(var(--hairline));
+}
+
 .secondary {
   background: transparent;
   color: var(--ink);
   border: var(--hairline) solid var(--line);
+}
+
+/* ink on primary-100 is 12.32:1 */
+.secondary:hover:not(:disabled) {
+  background: var(--primary-100);
+  border-color: var(--primary-700);
+}
+
+/* ink on primary-300 is 7.86:1 */
+.secondary:active:not(:disabled) {
+  background: var(--primary-300);
+  border-color: var(--primary-700);
+  transform: translateY(var(--hairline));
 }

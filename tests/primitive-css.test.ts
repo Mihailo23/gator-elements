@@ -23,6 +23,12 @@ describe("primitive css", () => {
     expect(button).not.toContain("width: 100%");
     expect(button).toContain("var(--focus)");
     expect(button).toContain("var(--signal)");
+    expect(button).toContain(":hover:not(:disabled)");
+    expect(button).toContain(":active:not(:disabled)");
+    expect(button).toContain(":disabled");
+    expect(button).toContain(":focus-visible");
+    expect(button).toContain("var(--primary-900)");
+    expect(button).toContain("var(--neutral-200)");
     const badge = readFileSync(join(root, files[2]), "utf8");
     expect(badge).toContain("var(--signal-wash)");
     expect(badge).toContain("var(--ink)");
