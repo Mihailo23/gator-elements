@@ -20,6 +20,11 @@
   outline-offset: var(--ring);
 }
 
+.root:active:not(:disabled) {
+  transition-duration: 75ms;
+  transition-timing-function: ease-out;
+}
+
 .root:disabled {
   background: var(--neutral-200);
   color: var(--neutral-700);
