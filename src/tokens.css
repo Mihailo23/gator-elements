@@ -1,14 +1,39 @@
 :root {
-  --ink: #15202b;
-  --mute: #5c6b7a;
-  --paper: #f2f5f7;
+  /* ink on paper 11.30:1, ink on card 12.14:1 */
+  --ink: #1a365d;
+  /* ink-soft on paper 7.83:1, ink-soft on card 8.41:1 */
+  --ink-soft: #3d4f63;
+  /* line on card 3.73:1 */
+  --line: #6e879f;
+  --paper: #f4f7fb;
   --card: #ffffff;
-  --line: #d3dce4;
-  --signal: #c8890a;
+  /* white on signal 6.70:1 */
+  --signal: #1d4ed8;
+  /* ink on signal-wash 9.69:1 */
+  --signal-wash: #dbe7f5;
+  /* focus on paper 6.24:1, focus on card 6.70:1 */
+  --focus: #1d4ed8;
+
   --radius: 14px;
-  --space: 8px;
+  --radius-pill: 999px;
+  --hairline: 1px;
+  --ring: 2px;
+  --mark: 3px;
+  --slip-width: 560px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
   --font-serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --text-body: 18px;
-  --pad-form: 32px;
+
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 28px;
 }
