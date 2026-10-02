@@ -1,18 +1,70 @@
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/inter-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/inter-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/merriweather-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/merriweather-latin-700.woff2") format("woff2");
+}
+
 :root {
-  /* ink on paper 11.30:1, ink on card 12.14:1 */
-  --ink: #1a365d;
-  /* ink-soft on paper 7.83:1, ink-soft on card 8.41:1 */
-  --ink-soft: #3d4f63;
-  /* line on card 3.73:1 */
-  --line: #6e879f;
-  --paper: #f4f7fb;
+  /* Palette 2, five steps apart so neighbors are not interchangeable. */
+  --primary-900: #003e6b;
+  --primary-700: #0f609b;
+  --primary-500: #2680c2;
+  --primary-300: #84c5f4;
+  --primary-100: #dceefb;
+
+  /* Cyan supporting ramp. Not the yellow: gold stays retired. */
+  --secondary-900: #044e54;
+  --secondary-700: #0e7c86;
+  --secondary-500: #2cb1bc;
+  --secondary-300: #87eaf2;
+  --secondary-100: #e0fcff;
+
+  --neutral-900: #102a43;
+  --neutral-700: #334e68;
+  --neutral-500: #627d98;
+  --neutral-200: #d9e2ec;
+  --neutral-50: #f0f4f8;
+
+  /* ink on paper 13.25:1, ink on card 14.64:1 */
+  --ink: var(--neutral-900);
+  /* ink-soft on paper 7.82:1, ink-soft on card 8.64:1 */
+  --ink-soft: var(--neutral-700);
+  /* line on card 4.28:1 */
+  --line: var(--neutral-500);
+  --paper: var(--neutral-50);
   --card: #ffffff;
-  /* white on signal 6.70:1 */
-  --signal: #1d4ed8;
-  /* ink on signal-wash 9.69:1 */
-  --signal-wash: #dbe7f5;
-  /* focus on paper 6.24:1, focus on card 6.70:1 */
-  --focus: #1d4ed8;
+  /* white on signal 6.63:1 */
+  --signal: var(--primary-700);
+  /* ink on signal-wash 12.32:1 */
+  --signal-wash: var(--primary-100);
+  /* focus on paper 6.00:1, focus on card 6.63:1 */
+  --focus: var(--primary-700);
 
   --radius: 14px;
   --radius-pill: 999px;
@@ -29,8 +81,8 @@
   --space-6: 32px;
   --space-7: 48px;
 
-  --font-serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: Merriweather, Georgia, serif;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
 
   --text-sm: 14px;
   --text-md: 16px;

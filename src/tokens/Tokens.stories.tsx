@@ -10,6 +10,12 @@ const typeSteps = [
 
 const spaces = [1, 2, 3, 4, 5, 6, 7] as const;
 
+const ramps = [
+  ["Primary", "primary", ["900", "700", "500", "300", "100"]],
+  ["Secondary", "secondary", ["900", "700", "500", "300", "100"]],
+  ["Neutral", "neutral", ["900", "700", "500", "200", "50"]],
+] as const;
+
 const pairs = [
   ["Ink on paper", "--ink", "--paper"],
   ["Ink on card", "--ink", "--card"],
@@ -64,15 +70,49 @@ function Tokens() {
     >
       <div ref={probe} hidden />
       <section>
-        <h2 style={{ font: "600 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Type</h2>
+        <h2 style={{ font: "700 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Type</h2>
         {typeSteps.map(([token, use]) => (
-          <p key={token} style={{ fontSize: `var(${token})`, margin: "var(--space-2) 0" }}>
+          <p
+            key={token}
+            style={{
+              fontSize: `var(${token})`,
+              margin: "var(--space-2) 0",
+              fontFamily:
+                token === "--text-lg" || token === "--text-xl"
+                  ? "var(--font-serif)"
+                  : "var(--font-sans)",
+            }}
+          >
             <code>{token}</code> {use}
           </p>
         ))}
       </section>
       <section>
-        <h2 style={{ font: "600 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Space</h2>
+        <h2 style={{ font: "700 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Color</h2>
+        {ramps.map(([label, name, steps]) => (
+          <div key={name} style={{ marginTop: "var(--space-3)" }}>
+            <div>{label}</div>
+            <div style={{ display: "flex", gap: "var(--space-2)", marginTop: "var(--space-2)" }}>
+              {steps.map((step) => (
+                <div key={step} style={{ width: "var(--space-7)" }}>
+                  <div
+                    style={{
+                      height: "var(--space-7)",
+                      background: `var(--${name}-${step})`,
+                      border: "var(--hairline) solid var(--line)",
+                    }}
+                  />
+                  <code style={{ fontSize: "var(--text-sm)" }}>
+                    {name}-{step}
+                  </code>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+      <section>
+        <h2 style={{ font: "700 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Space</h2>
         {spaces.map((step) => (
           <div
             key={step}
@@ -95,7 +135,7 @@ function Tokens() {
         ))}
       </section>
       <section>
-        <h2 style={{ font: "600 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Pairs</h2>
+        <h2 style={{ font: "700 var(--text-lg) / 1.15 var(--font-serif)", margin: 0 }}>Pairs</h2>
         {pairs.map(([label, fg, bg], index) => (
           <div
             key={label}
